@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+
+{% block home %}
+
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+</head>
+
+<div class="center"> 
+    <h1>Affirmations</h1> 
+
+    <div class="pencil">
+        <div class="eraser"></div>
+        <div class="ferrule"></div>
+        <div class="shaft"></div>
+        <div class="lead"></div>
+      </div>
+
+        <a href="/createEnvelope">
+            <div class="wrapper">
+                <div class="mail">
+                <div class="cover"></div>
+                <div class="letter"><h1>Create an envelope!</h1></div>
+                </div>
+            </div>
+        </a>
+</div>
+
+{% endblock %}
+
+

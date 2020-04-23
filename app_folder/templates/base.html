@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <meta charset="UTF-8">
+       <title>Affirmation Online</title>
+
+       <!-- CSS -->
+       <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/base.css') }}">
+       <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/envelope.css') }}">
+       <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
+
+
+        <!-- JAVASCRIPT -->
+        <script src="{{url_for('static', filename='envelope.js')}}"></script>
+        <script src="{{url_for('static', filename='pencil.js')}}"></script>
+
+
+
+    </head>
+
+
+    <body>
+        {% block home %} {% endblock %}
+        {% block gallery %}{% endblock %}
+        {% block register %}{% endblock %}
+
+    </body>
+</html>

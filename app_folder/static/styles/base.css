@@ -1,0 +1,39 @@
+body{
+    background-color: #E6E6DC;
+    font-size: 10px
+}
+
+
+h1{
+    color: #00628B;
+    font-size: 10em;
+}
+
+h2{
+    color: #81A594;
+    font-size: 8em;
+}
+
+input{
+    text-align: center;
+    width: 450px;
+    height: 100px;
+    font-size: 5em;
+    color: #798992;
+}
+
+.center{
+    text-align: center;
+}
+
+.paper{
+    position: absolute;
+    top:15%;
+    left: 30%;
+    background-color: #f5f4f4;
+    border-left:rgb(187, 187, 187) solid 8px;
+    border-bottom:rgb(187, 187, 187)solid 8px;
+    height: 800px;
+    width: 800px;
+}
+
