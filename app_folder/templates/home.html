@@ -10,8 +10,8 @@
 
 </head>
 
-<div class="center"> 
-    <h1>Affirmations</h1> 
+<div class="center">
+    <h1>Affirmations</h1>
 
     <a href="{{ url_for('login') }}">
         <div class="pencil">
@@ -22,8 +22,8 @@
           </div>
     </a>
 
-
-        <a href="{{ url_for('createEnvelope') }}">
+    <!-- removed url_for() because it was giving me problems -->
+        <a href="createEnvelope">
             <div class="wrapper">
                 <div class="mail">
                 <div class="cover"></div>
@@ -34,5 +34,3 @@
 </div>
 
 {% endblock %}
-
-
