@@ -13,14 +13,17 @@
 <div class="center"> 
     <h1>Affirmations</h1> 
 
-    <div class="pencil">
-        <div class="eraser"></div>
-        <div class="ferrule"></div>
-        <div class="shaft"></div>
-        <div class="lead"></div>
-      </div>
+    <a href="{{ url_for('login') }}">
+        <div class="pencil">
+            <div class="eraser"></div>
+            <div class="ferrule"></div>
+            <div class="shaft"></div>
+            <div class="lead"></div>
+          </div>
+    </a>
 
-        <a href="/createEnvelope">
+
+        <a href="{{ url_for('createEnvelope') }}">
             <div class="wrapper">
                 <div class="mail">
                 <div class="cover"></div>

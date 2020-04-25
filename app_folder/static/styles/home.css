@@ -7,7 +7,7 @@
     -webkit-transform:rotate(90deg); /* Safari and Chrome */
   }
   
-  .pencil:before {
+  /* .pencil:before {
     content: "";
     position: absolute;
     height:512px;
@@ -16,7 +16,7 @@
     border-radius: 50%;
     margin-left:35px;
     margin-top:-2px;
-  }
+  } */
   
   .pencil .eraser {
     height:35px;
@@ -30,7 +30,7 @@
     border-top-right-radius: 10px;
   }
   
-  .pencil .eraser:before {
+  /* .pencil .eraser:before {
     content: "";
     position: absolute;
     width:20px;
@@ -40,7 +40,7 @@
     -webkit-border-top-right-radius: 10px;
     -moz-border-radius-topright: 10px;
     border-top-right-radius: 10px;
-  }
+  } */
   
   .pencil .ferrule {
     height:45px;
@@ -48,14 +48,14 @@
     background: #CCD1D9;
   }
   
-  .pencil .ferrule:before {
+  /* .pencil .ferrule:before {
     content: "";
     position:absolute;
     height:45px;
     width:20px;
     margin-left:20px;
     background: #AAB2BD;
-  }
+  } */
   
   .pencil .shaft {
     height:350px;
@@ -63,14 +63,14 @@
     background: #FFCE54;
   }
   
-  .pencil .shaft:before {
+  /* .pencil .shaft:before {
     content: "";
     position: absolute;
     height: 350px;
     width: 20px;
     margin-left: 20px;
     background: #FCBB42;
-  }
+  } */
   
   .pencil .lead {
       border-left: 20px solid transparent;
