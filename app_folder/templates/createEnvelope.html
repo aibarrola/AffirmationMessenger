@@ -12,10 +12,17 @@
             <h2>{{ form.name.label }}</h2>
             {{ form.name(size=64) }}
 
-            <h2> Family </h2>
-            {{ form.fam.label }}
+            <!-- styling is linked to base.css, input -->
+            <h2>{{ form.fams.label }}</h2>
+            <!-- {% for option in form.fams %}
+              {{ option }} {{ option.label }}
+            {% endfor %} -->
 
-            <h2>{{ form.name.label }}</h2>
+            <!-- styling is linked to base.css, input -->
+            <h2>{{ form.image_file.label }}</h2>
+            {{ form.image_file }}
+
+            <h2>{{ form.password.label }}</h2>
             {{ form.password(size=32) }}
             <br>
 
