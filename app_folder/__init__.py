@@ -39,7 +39,8 @@ def gallery():
 
 @app.route("/createEnvelope")
 def register():
-    return render_template('createEnvelope.html', title="Create Envelope")
+    current_form = forms.RegistrationForm()
+    return render_template('createEnvelope.html', title="Create Envelope", form=current_form)
 
 
 @app.route("/login")

@@ -6,14 +6,18 @@
 <div class="center">
     <h1> Creating Envelope </h1>
     <div class="paper">
-        <form>
-            <h2> Name</h2>
-            <input type="text">
-    
+
+        <form action="" method="post" novalidate>
+          {{ form.hidden_tag() }}
+            <h2>{{ form.name.label }}</h2>
+            {{ form.name(size=64) }}
+
             <h2> Family </h2>
-            
-            <h2> Password</h2>
-            <input type="password">
+            {{ form.fam.label }}
+
+            <h2>{{ form.name.label }}</h2>
+            {{ form.password(size=32) }}
+            <br>
 
             <button class="btn btn-primary"> Create Account </button>
 
