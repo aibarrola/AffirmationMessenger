@@ -2,7 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, RadioField, FileField
 from wtforms.validators import DataRequired
 
-from .__init__ import app
+# from .__init__ import app
 from .models import User
 
 famArray = [('Blue Ox', 'Blue Ox'), ('Red Dragon','Red Dragon'),
@@ -22,7 +22,7 @@ class LoginForm(FlaskForm):
                 return False
 
 class RegistrationForm(FlaskForm):
-    name = StringField('Name', validators=[DataRequired()])
+    username = StringField('Name', validators=[DataRequired()])
     image_file = FileField('Picture')
     fams = RadioField('Family', choices=famArray) #returns a string
     password = PasswordField('Password', validators=[DataRequired()])
