@@ -1,9 +1,10 @@
+from flask import flash
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, RadioField, FileField
 from wtforms.validators import DataRequired
 
-# from .__init__ import app
-from .models import User
+from app_folder import app
+from app_folder.models import User
 
 famArray = [('Blue Ox', 'Blue Ox'), ('Red Dragon','Red Dragon'),
             ('Yellow Monkey','Yellow Monkey'), ('Green Snake','Green Snake')]
@@ -31,4 +32,5 @@ class RegistrationForm(FlaskForm):
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
         if user is not None:
+            flash("Username is taken.")
             raise ValidationError('Please use a different username.')
