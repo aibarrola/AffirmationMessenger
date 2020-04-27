@@ -10,7 +10,6 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-
 @app.route("/")
 @app.route("/home")
 def home():
@@ -25,7 +24,7 @@ def gallery():
 def register():
     current_form = RegistrationForm()
     if current_user.is_authenticated:
-        return redirect (url_for('index'))
+        return redirect (url_for('/'))
     if current_form.validate_on_submit():
         login_user = User(username=current_form.username.data)
         login_user.set_password(current_form.password.data)
