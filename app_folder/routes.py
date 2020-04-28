@@ -18,7 +18,7 @@ def home():
 
 @app.route("/gallery")
 def gallery():
-    return render_template('gallery.html', title="Gallery")
+    return render_template('gallery.html', title="Gallery", User=User)
 
 @app.route("/createEnvelope", methods=['GET', 'POST'])
 def register():
