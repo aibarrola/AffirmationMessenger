@@ -5,8 +5,10 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    {{ User.query.all() }}
+    {% for user in User.query.all() %}
+      <p>{{ user }}</p>
+    {% endfor %}
 
-    
-      
+
+
 {% endblock %}
