@@ -49,9 +49,15 @@ def login():
 
 
 @app.route("/user/<user>", methods=['GET', 'POST'])
-def sendMessage(user):
+def sendMessage(user, message):
     theUser = User.query.filter_by(username=user).first()
+    Usermessage = message
     form = SendMessageForm()
     if form.validate_on_submit():
+        msg = sendMessage(username = theUser.username, receiver = Usermessage)
+        db.session.add(event)
+        db.session.commit()
         return redirect("/gallery")
     return render_template('sendMessage.html', title="Send Message", aUser=theUser, form=form)
+
+
