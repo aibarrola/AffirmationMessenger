@@ -15,11 +15,6 @@ def load_user(user_id):
 def home():
     return render_template('home.html', title="Home", User=User)
 
-
-@app.route("/gallery")
-def gallery():
-    return render_template('gallery.html', title="Gallery", User=User)
-
 @app.route("/createEnvelope", methods=['GET', 'POST'])
 def register():
     current_form = RegistrationForm()
@@ -48,6 +43,11 @@ def login():
     return render_template('login.html', title='Gallery', form=form)
 
 
+
+@app.route("/gallery")
+def gallery():
+    return render_template('gallery.html', title="Gallery", User=User)
+
 @app.route("/user/<user>", methods=['GET', 'POST'])
 def sendMessage(user):
     theUser = User.query.filter_by(username=user).first()
@@ -57,6 +57,6 @@ def sendMessage(user):
         db.session.add(event)
         db.session.commit()
         return redirect("/gallery")
-    return render_template('sendMessage.html', title="Send Message", aUser=theUser, form=form)
+    return render_template('sendMessage.html', title="Send Message", ToUser=theUser, form=form)
 
 
