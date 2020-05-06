@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, flash, request, url_for
 from app_folder import app, db, login
 from .forms import LoginForm, RegistrationForm, SendMessageForm
-from app_folder.models import User
+from app_folder.models import User, Message
 from flask_login import current_user, login_required, logout_user, login_user
 
 
@@ -53,10 +53,8 @@ def sendMessage(user):
     theUser = User.query.filter_by(username=user).first()
     form = SendMessageForm()
     if form.validate_on_submit():
-        msg = sendMessage(username = theUser.username, receiver = Usermessage)
-        db.session.add(event)
+        msg = Message(user_id=theUser.id, userMessage=form.receiver.data)
+        db.session.add(msg)
         db.session.commit()
         return redirect("/gallery")
     return render_template('sendMessage.html', title="Send Message", ToUser=theUser, form=form)
-
-
