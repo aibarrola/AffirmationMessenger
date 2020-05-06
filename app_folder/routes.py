@@ -53,8 +53,9 @@ def sendMessage(user):
     theUser = User.query.filter_by(username=user).first()
     form = SendMessageForm()
     if form.validate_on_submit():
-        msg = Message(user_id=theUser.id, userMessage=form.receiver.data)
+        msg = Message(user_id=theUser.id, userMessage=form.userMessage.data)
         db.session.add(msg)
         db.session.commit()
         return redirect("/gallery")
     return render_template('sendMessage.html', title="Send Message", ToUser=theUser, form=form)
+

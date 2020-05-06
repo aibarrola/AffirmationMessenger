@@ -37,6 +37,6 @@ class RegistrationForm(FlaskForm):
 
 
 class SendMessageForm(FlaskForm):
-    receiver = StringField('What is your message:', validators=[DataRequired()])
+    userMessage = StringField('What is your message:', validators=[DataRequired()])
     submit = SubmitField(' Send Message ')
     
