@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block message %}
+
+<h1> Sending message to {{aUser.username}} </h1>
+
+<form action="" method = "post">
+    {{ form.hidden_tag() }}
+
+    <p>
+        {{ form.receiver.label}}
+        {{ form.receiver(size=120)}}
+    </p>
+
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+
+{% endblock %}

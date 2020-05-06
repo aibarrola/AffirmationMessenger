@@ -6,17 +6,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     {% for user in User.query.all() %}
-  
-    <div class="mail">
-        <div class="cover"> 
-            <div class="letter">
-                <h1> {{user}} </h1>
-            </div>
-        </div>
-  
-        
-    </div>
-    
+    <a href="/user/{{user.username}}">
+        <h3> {{user}} </h3>
+        <br>
+    </a>
+
     {% endfor %}
 
 

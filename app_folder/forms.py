@@ -34,3 +34,8 @@ class RegistrationForm(FlaskForm):
         if user is not None:
             flash("Username is taken.")
             raise ValidationError('Please use a different username.')
+
+
+class SendMessageForm(FlaskForm):
+    receiver = StringField('What is your message:', validators=[DataRequired()])
+    submit = SubmitField(' Send Message ')

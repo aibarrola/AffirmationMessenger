@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, flash, request, url_for
 from app_folder import app, db, login
-from .forms import LoginForm, RegistrationForm
+from .forms import LoginForm, RegistrationForm, SendMessageForm
 from app_folder.models import User
 from flask_login import current_user, login_required, logout_user, login_user
 
@@ -46,3 +46,12 @@ def login():
             return redirect("login")
         return redirect("gallery")
     return render_template('login.html', title='Gallery', form=form)
+
+
+@app.route("/user/<user>", methods=['GET', 'POST'])
+def sendMessage(user):
+    theUser = User.query.filter_by(username=user).first()
+    form = SendMessageForm()
+    if form.validate_on_submit():
+        return redirect("/gallery")
+    return render_template('sendMessage.html', title="Send Message", aUser=theUser, form=form)
