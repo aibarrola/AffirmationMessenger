@@ -49,9 +49,8 @@ def login():
 
 
 @app.route("/user/<user>", methods=['GET', 'POST'])
-def sendMessage(user, message):
+def sendMessage(user):
     theUser = User.query.filter_by(username=user).first()
-    Usermessage = message
     form = SendMessageForm()
     if form.validate_on_submit():
         msg = sendMessage(username = theUser.username, receiver = Usermessage)
