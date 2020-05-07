@@ -25,9 +25,9 @@
     <body>
         <div>
             {% if current_user.is_anonymous %}
-            <a href="{{ url_for('login') }}"> Login</a>
+            <h3><a href="{{ url_for('login') }}"> Login</a></h3>
             {% else %}
-            <a href="{{ url_for('logout') }}"> Logout</a>
+            <h3><a href="{{ url_for('logout') }}"> Logout</a></h3>
             {% endif %}
         </div>
         
@@ -37,6 +37,7 @@
         {% block register %}{% endblock %}
         {% block login %}{% endblock %}
         {% block message %}{% endblock %}
+        {% block inbox %}{% endblock %}
 
         {% with messages = get_flashed_messages() %}
         {% if messages %}

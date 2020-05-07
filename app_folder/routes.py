@@ -60,9 +60,18 @@ def sendMessage(user):
     ToUser = User.query.filter_by(username=user).first()
     form = SendMessageForm()
     if form.validate_on_submit():
-        msg = Message(user_id=ToUser.id, userMessage=form.userMessage.data)
+        msg = Message(user_id=ToUser.id, userMessage=form.userMessage.data, username = ToUser.username)
         db.session.add(msg)
         db.session.commit()
         return redirect("/gallery")
     return render_template('sendMessage.html', title="Send Message", ToUser=ToUser, form=form)
 
+
+@app.route("/inbox", methods=['GET', 'POST'])
+@login_required
+def inbox():
+    if not current_user.is_authenticated:
+        return redirect("/home")
+    user = current_user
+    messages = Message.query.filter_by(username=user.username).all()
+    return render_template('inbox.html', title="Inbox", user = user, messages = messages)

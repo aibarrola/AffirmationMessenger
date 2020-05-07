@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block inbox %}
+
+<h1> Inbox</h1>
+
+
+{% for i in messages %}
+<h3> {{i.userMessage}}</h3>
+<h4> From {{i.userFrom}}</h4>
+<hr>
+{% endfor %}
+
+
+{% endblock %}
