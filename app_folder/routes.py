@@ -32,30 +32,37 @@ def register():
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect("/")
+        return redirect("gallery")
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash("Invalid username or password")
             return redirect("login")
+        login_user(user)
         return redirect("gallery")
     return render_template('login.html', title='Gallery', form=form)
 
+@app.route("/logout")
+def logout():
+    logout_user()
+    return redirect("home")
 
 
 @app.route("/gallery")
+@login_required
 def gallery():
-    return render_template('gallery.html', title="Gallery", User=User)
+    return render_template('gallery.html', title="Gallery", Users=User)
 
 @app.route("/user/<user>", methods=['GET', 'POST'])
+@login_required
 def sendMessage(user):
-    theUser = User.query.filter_by(username=user).first()
+    ToUser = User.query.filter_by(username=user).first()
     form = SendMessageForm()
     if form.validate_on_submit():
-        msg = Message(user_id=theUser.id, userMessage=form.userMessage.data)
+        msg = Message(user_id=ToUser.id, userMessage=form.userMessage.data)
         db.session.add(msg)
         db.session.commit()
         return redirect("/gallery")
-    return render_template('sendMessage.html', title="Send Message", ToUser=theUser, form=form)
+    return render_template('sendMessage.html', title="Send Message", ToUser=ToUser, form=form)
 
