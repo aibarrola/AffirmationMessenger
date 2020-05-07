@@ -60,7 +60,7 @@ def sendMessage(user):
     ToUser = User.query.filter_by(username=user).first()
     form = SendMessageForm()
     if form.validate_on_submit():
-        msg = Message(user_id=ToUser.id, userMessage=form.userMessage.data, username = ToUser.username)
+        msg = Message(user_id=ToUser.id, userMessage=form.userMessage.data, username = ToUser.username, userFrom = form.userFrom.data)
         db.session.add(msg)
         db.session.commit()
         return redirect("/gallery")
