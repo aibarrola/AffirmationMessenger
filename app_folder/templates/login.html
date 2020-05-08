@@ -8,15 +8,15 @@
         <form action="" method="post" novalidate>
             {{ form.hidden_tag()}}
 
-                <h2>{{ form.username.label}}</h2>
+                <h2>{{form.username.label}}</h2>
                 {{ form.username(size=32)}}
 
 
                 <h2>{{ form.password.label}}</h2>
                 {{ form.password(size=32)}}
-   
+
                 <br>
-                <br>
+                
                 <button class="btn submit"> Login </button>
             
         </form>
