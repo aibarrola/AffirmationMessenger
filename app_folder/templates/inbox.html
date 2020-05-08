@@ -6,7 +6,6 @@
 
 
 {% for i in messages %}
-
 <div class="flip-note"> 
     <div class="flip-note-inner">
         <div class="flip-note-front">
@@ -17,10 +16,68 @@
         </div>
     </div>
 </div>
-
-
 {% endfor %}
 
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h3> Column 1</h3>
+            {% for i in range(0,messages|length,3) %}
+   
+                <div class="flip-note"> 
+                    <div class="flip-note-inner">
+                        <div class="flip-note-front">
+                            <h3> {{messages[i].userFrom}}</h3>
+                        </div>
+                        <div class="flip-note-back">
+                            <h4> {{messages[i].userMessage}}</h4>
+                        </div>
+                    </div>
+                </div>
+   
+            {% endfor %}
+        </div>
+
+        <div class="col-sm">
+            <h3> Column 2 </h3>
+                {% for i in range(0,messages|length,3) %}
+                    {% if i <= message|length %}
+                    <div class="flip-note"> 
+                        <div class="flip-note-inner">
+                            <div class="flip-note-front">
+                                <h3> {{messages[i+1].userFrom}}</h3>
+                            </div>
+                            <div class="flip-note-back">
+                                <h4> {{messages[i+1].userMessage}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="col-sm">
+            <h3> Column 3</h3>
+            {% for i in range(0,messages|length,3) %}
+                {% if i <= message|length %}
+                <div class="flip-note"> 
+                    <div class="flip-note-inner">
+                        <div class="flip-note-front">
+                            <h3> {{messages[i+2].userFrom}}</h3>
+                        </div>
+                        <div class="flip-note-back">
+                            <h4> {{messages[i+2].userMessage}}</h4>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+
+</div>
 
 {% endblock %}
 
