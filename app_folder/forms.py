@@ -1,6 +1,6 @@
 from flask import flash
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, RadioField, FileField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, RadioField, FileField, SelectField
 from wtforms.validators import DataRequired
 
 from app_folder import app
@@ -24,8 +24,7 @@ class LoginForm(FlaskForm):
 
 class RegistrationForm(FlaskForm):
     username = StringField('Name', validators=[DataRequired()])
-    image_file = FileField('Picture')
-    fams = RadioField('Family', choices=famArray) #returns a string
+    famchoice = SelectField('Family: ',choices=[('Blue', 'Blue Ox'),('Red', 'Red Dragon'),('Yellow', 'Yellow Monkey'), ('Green', 'Green Snake')])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Register')
 

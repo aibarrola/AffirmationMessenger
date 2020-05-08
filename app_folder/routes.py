@@ -21,7 +21,7 @@ def register():
     if current_user.is_authenticated:
         return redirect (url_for('/'))
     if current_form.validate_on_submit():
-        login_user = User(username=current_form.username.data)
+        login_user = User(username=current_form.username.data, family = current_form.famchoice.data)
         login_user.set_password(current_form.password.data)
         db.session.add(login_user)
         db.session.commit()
