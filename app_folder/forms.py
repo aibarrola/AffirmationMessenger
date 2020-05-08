@@ -6,8 +6,6 @@ from wtforms.validators import DataRequired
 from app_folder import app
 from app_folder.models import User
 
-famArray = [('Blue Ox', 'Blue Ox'), ('Red Dragon','Red Dragon'),
-            ('Yellow Monkey','Yellow Monkey'), ('Green Snake','Green Snake')]
 
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
@@ -24,7 +22,7 @@ class LoginForm(FlaskForm):
 
 class RegistrationForm(FlaskForm):
     username = StringField('Name', validators=[DataRequired()])
-    famchoice = SelectField('Family: ',choices=[('Blue', 'Blue Ox'),('Red', 'Red Dragon'),('Yellow', 'Yellow Monkey'), ('Green', 'Green Snake')])
+    famchoice = SelectField('Family ',choices=[('Blue', 'Blue Ox'),('Red', 'Red Dragon'),('Yellow', 'Yellow Monkey'), ('Green', 'Green Snake')])
     password = PasswordField('Password', validators=[DataRequired()])
 
     def validate_username(self, username):

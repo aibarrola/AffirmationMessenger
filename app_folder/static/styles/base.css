@@ -39,6 +39,12 @@ input{
     font-size: 8em;
 }
 
+.famChoice{
+    height: 100px;
+    font-size: 5em;
+    color: #798992;
+}
+
 .userMessage{
     height: 400px;
     width: 600px;
@@ -65,5 +71,12 @@ input{
 .nav{
     font-size: 3em;
     background-color: #81A594;
+}
+
+.submit{
+    margin-top: 30px;
+    background-color: #81A594;
+    color: white;
+    font-size: 4em;
 }
 
