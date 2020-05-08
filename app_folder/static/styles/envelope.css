@@ -139,9 +139,9 @@
 
   .flip-note{
     background-color: transparent;
-    width: 300px;
+    width: 350px;
     height: 200px;
-
+    margin-bottom: 10px;
   }
 
   /* This container is needed to position the front and back side */
@@ -153,6 +153,7 @@
   text-align:center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  left: 35%;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
