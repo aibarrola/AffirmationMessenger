@@ -9,12 +9,80 @@
     <h4> You can click on these people to start writing your affirmations!</h4>
 </div>
 
-    {% for user in Users.query.all() %}
+<!-- TO LIST ALL USERNAMES  -->
+<!-- <div>
+    {% for user in Alluser %}
         <a href="/user/{{user.username}}">
-            <div> <h4> {{user.username}} </h4></div>
-            <br>
+                <div class="mailGallery">
+                <div class="coverGallery"></div>
+                <div class="letterGallery"><h1>{{user.username}}</h1></div>
+                </div>
         </a>
     {% endfor %}
+</div> -->
+
+<div id="galleryBoard" class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+           <div>
+            {% for i in range(0,Alluser|length,4 ) %}
+                <a href="/user/{{Alluser[i].username}}">
+                    <div class="mailGallery">
+                        <div class="coverGallery"></div>
+                        <div class="letterGallery"> <h1> {{Alluser[i].username}}</h1></div>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+        
+        </div>
+
+        <div class="col-md-3">  
+                <div>
+                    
+                    {% for i in range(0,Alluser|length,4 ) %}
+                    {% if i < (Alluser|length - 2) %}
+                        <a href="/user/{{Alluser[i+1].username}}">
+                            <div class="mailGallery">
+                                <div class="coverGallery"></div>
+                                <div class="letterGallery"> <h1> {{Alluser[i+1].username}}</h1></div>
+                            </div>
+                        </a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+        </div>
+
+        <div class="col-md-3">
+                {% for i in range(0,Alluser|length,4 ) %}
+                {% if i < (Alluser|length - 2) %}
+                <a href="/user/{{Alluser[i+2].username}}">
+                    <div class="mailGallery">
+                        <div class="coverGallery"></div>
+                        <div class="letterGallery"> <h1> {{Alluser[i+2].username}}</h1></div>
+                    </div>
+                </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="col-md-3">
+                {% for i in range(0,Alluser|length,4 ) %}
+                {% if i < (Alluser|length - 3) %}
+                <a href="/user/{{Alluser[i+3].username}}">
+                    <div class="mailGallery">
+                        <div class="coverGallery"></div>
+                        <div class="letterGallery"> <h1> {{Alluser[i+3].username}}</h1></div>
+                    </div>
+                </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        
+    </div>
+</div>
 
 
 

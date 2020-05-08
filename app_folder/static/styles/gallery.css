@@ -1,0 +1,89 @@
+ 
+  #galleryBoard{
+      margin-top: 10%
+  }
+  
+  
+  .mailGallery{
+    width: 300px;
+    height: 200px;
+    background: #ff8789;
+    position: relative;
+    transform-style: preserve-3d;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    text-align:center;
+    margin-bottom: 40%;
+    left: 15%;
+  }
+  
+  /* MAKES THE MIDDLE RIGHT TRIANGLE*/
+.mailGallery:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 150px solid Transparent;
+    border-right: 150px solid #ff393c;         
+    border-top: 100px solid Transparent;
+    border-bottom: 100px solid #ff393c;
+    z-index: 5;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .mailGallery:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 150px solid #ff5355;
+    border-right: 150px solid Transparent;
+    border-top: 100px solid Transparent;
+    border-bottom: 100px solid #ff5355;
+    z-index: 4;
+    border-bottom-left-radius: 5px;
+  }
+  
+  
+  /* THIS IS THE TOP FLAP */
+  .coverGallery:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 100px solid #ff8789;
+    border-bottom: 100px solid transparent;
+    z-index: 6;
+    transform-origin: top;
+    transform: rotateX(0deg);
+    transform: rotateX(180deg);
+  }
+  
+  .letterGallery{
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    left: 10px;
+    background: #dedede;
+    width: 290px;
+    height: 200px;
+    border-radius: 10px;
+    transition: all 1s ease;
+  }
+  
+  .letterGallery h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    color: #798992;
+    font-weight: 900;
+  }
+  
+  
+
+

@@ -52,7 +52,8 @@ def logout():
 @app.route("/gallery")
 @login_required
 def gallery():
-    return render_template('gallery.html', title="Gallery", Users=User)
+    Alluser = User.query.all()
+    return render_template('gallery.html', title="Gallery", Alluser=Alluser)
 
 @app.route("/user/<user>", methods=['GET', 'POST'])
 @login_required
