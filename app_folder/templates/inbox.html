@@ -6,9 +6,19 @@
 
 
 {% for i in messages %}
-<h3> {{i.userMessage}}</h3>
-<h4> From {{i.userFrom}}</h4>
-<hr>
+
+<div class="flip-note"> 
+    <div class="flip-note-inner">
+        <div class="flip-note-front">
+            <h3> {{i.userFrom}}</h3>
+        </div>
+        <div class="flip-note-back">
+            <h4> {{i.userMessage}}</h4>
+        </div>
+    </div>
+</div>
+
+
 {% endfor %}
 
 
