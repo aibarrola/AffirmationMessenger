@@ -4,6 +4,7 @@
     <h1 class="center"> This is Gallery</h1>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
+
     <h2> Hi, {{current_user.username}}!</h2>
     <h3> You are in family: {{current_user.family}}</h3>
 
@@ -11,13 +12,10 @@
 
     {% for user in Users.query.all() %}
     <a href="/user/{{user.username}}">
-        <h3> {{user}} </h3>
+        <h4> {{user.username}} </h4>
         <br>
     </a>
 
     {% endfor %}
-
-    <a href="/inbox"> Inbox </a>
-
 
 {% endblock %}

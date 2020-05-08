@@ -13,16 +13,19 @@
 <div class="center">
     <h1>Affirmations</h1>
 
-    <a href="{{ url_for('login') }}">
-        <div class="pencil">
-            <div class="eraser"></div>
-            <div class="ferrule"></div>
-            <div class="shaft"></div>
-            <div class="lead"></div>
-          </div>
-    </a>
 
-    <!-- removed url_for() because it was giving me problems -->
+        <div class="pencil" >
+            <a href="{{ url_for('login') }}">
+                <div class="eraser"></div>
+                <div class="ferrule"></div>
+                <div class="shaft"> 
+                    <p class="loginText"> Login </p>
+                </div>
+                <div class="lead"> </div>
+            </a>
+          </div>
+
+
         <a href="createEnvelope">
             <div class="wrapper">
                 <div class="mail">

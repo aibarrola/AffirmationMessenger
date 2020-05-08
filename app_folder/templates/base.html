@@ -25,11 +25,17 @@
     <body>
         <div>
             {% if current_user.is_anonymous %}
-            <h3><a href="{{ url_for('login') }}"> Login</a></h3>
+ 
             {% else %}
-            <h3><a href="{{ url_for('logout') }}"> Logout</a></h3>
+            <nav class="nav nav-pills nav-fill">
+                <a class="nav-item nav-link" href="{{ url_for('gallery') }}">Gallery</a>
+                <a class="nav-item nav-link" href="{{ url_for('inbox') }}">Inbox</a>
+                <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+              </nav>
             {% endif %}
         </div>
+
+        
         
 
         {% block home %} {% endblock %}

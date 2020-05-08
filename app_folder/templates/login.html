@@ -4,23 +4,21 @@
 
 <div class="center">
     <h1> Login </h1>
-    <div class="paper">
+    <div id="loginpaper" class="paper">
         <form action="" method="post" novalidate>
             {{ form.hidden_tag()}}
 
-            <p>
-                {{ form.username.label}}<br>
+                <h2>{{ form.username.label}}</h2>
                 {{ form.username(size=32)}}
-            </p>
 
-            <p>
-                {{ form.password.label}} <br>
+
+                <h2>{{ form.password.label}}</h2>
                 {{ form.password(size=32)}}
-            </p>
+   
+                <br>
+                <br>
+                <button class="btn btn-primary"> Login </button>
             
-            <p>
-                {{ form.submit()}}
-            </p>
         </form>
 
     </div>

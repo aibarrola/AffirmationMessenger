@@ -4,19 +4,23 @@
 
 <h1> Sending message to {{ToUser.username}} </h1>
 
-<form action="" method = "post">
-    {{ form.hidden_tag() }}
 
-    <p>
-        {{ form.userMessage.label}}
-        {{ form.userMessage(size=128)}}
-        {{ form.userFrom.label}}
-        {{ form.userFrom(size=64)}}
-    </p>
+<div class="center paper">
+    <form action="" method = "post">
+        {{ form.hidden_tag() }}
+    
+        <p>
+            <h2>{{ form.userMessage.label}}</h2>
+            {{ form.userMessage(size=128, class_='userMessage')}}
+            <h3>{{ form.userFrom.label}}</h3>
+            {{ form.userFrom(size=64)}}
+        </p>
+    
+        <p>
+            <button class="btn btn-primary"> Send Message </button>
+        </p>
+    </form>
+</div>
 
-    <p>
-        {{ form.submit() }}
-    </p>
-</form>
 
 {% endblock %}
