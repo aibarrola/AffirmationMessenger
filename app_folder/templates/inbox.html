@@ -25,7 +25,7 @@
         <div class="col-sm">
             <h3> Column 1</h3>
             {% for i in range(0,messages|length,3) %}
-   
+                {% if i <= messages|length %}
                 <div class="flip-note"> 
                     <div class="flip-note-inner">
                         <div class="flip-note-front">
@@ -36,14 +36,14 @@
                         </div>
                     </div>
                 </div>
-   
+                {% endif %}
             {% endfor %}
         </div>
 
         <div class="col-sm">
             <h3> Column 2 </h3>
                 {% for i in range(0,messages|length,3) %}
-                    {% if i <= message|length %}
+                    {% if i < (messages|length - 1) %}
                     <div class="flip-note"> 
                         <div class="flip-note-inner">
                             <div class="flip-note-front">
@@ -61,7 +61,8 @@
         <div class="col-sm">
             <h3> Column 3</h3>
             {% for i in range(0,messages|length,3) %}
-                {% if i <= message|length %}
+                {% if i < (messages|length - 2) %}
+ 
                 <div class="flip-note"> 
                     <div class="flip-note-inner">
                         <div class="flip-note-front">
