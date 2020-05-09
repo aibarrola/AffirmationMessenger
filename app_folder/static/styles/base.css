@@ -73,6 +73,10 @@ input{
     height:550px;
 }
 
+#messagePaper{
+    height: 550px;
+}
+
 /* styling for the navbar */
 .nav{
     font-size: 3em;
