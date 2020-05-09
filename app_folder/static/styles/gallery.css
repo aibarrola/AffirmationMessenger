@@ -16,6 +16,8 @@
     text-align:center;
     margin-bottom: 40%;
     left: 15%;
+    transition: all .2s ease;
+
   }
   
   /* MAKES THE MIDDLE RIGHT TRIANGLE*/
@@ -73,15 +75,21 @@
     border-radius: 10px;
     transition: all 1s ease;
   }
+
+
+  .mailGallery:hover{ 
+      transform: translateY(-8px);
+  }
   
   .letterGallery h1{
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 20px;
-    color: #798992;
+    font-size: 4em;
+    color: #00628B;
     font-weight: 900;
+
   }
   
   

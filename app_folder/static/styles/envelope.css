@@ -65,7 +65,7 @@
     z-index: 6;
     transform-origin: top;
     transform: rotateX(0deg);
-    transition: all 1s 1s ease;
+    transition: all .5s 1s ease;
   }
   
   .letter{
