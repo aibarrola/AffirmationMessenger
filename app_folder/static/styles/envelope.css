@@ -113,19 +113,20 @@
   /* This container is needed to position the front and back side */
 .flip-note-inner{
   position: relative;
-  width: 100%;
-  min-height: 200px;
+  width: 350px;
+  height: 200px;
   text-align:center;
-  transition: transform 0.8s;
+  transition: 0.8s ease-in;
   transform-style: preserve-3d;
   left: 35%;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-note:hover .flip-note-inner, .overflow-auto{
-  transform: rotateY(180deg);
+.flip-note:hover .flip-note-inner{
+  transform: rotateY(180deg) translateX(-40px);
   z-index: 10;
 }
+
 
 /* Position and hides the backside */
 .flip-note-front, .flip-note-back{
@@ -146,13 +147,22 @@
 }
 
 .flip-note-back{
-  background-color: #f5f4f4;
+  background-color: #f3f3f3;
   color: #798992;
   transform: rotateY(180deg);
   border-left:rgb(187, 187, 187) solid 4px;
   border-bottom:rgb(187, 187, 187) solid 4px;
-
 }
+
+
+/* ATTEMPT TO MAKE WIDTH BIGGER ONLY IF TEXT EXCEED HEIGHT MAX WHEN HOVER */
+/* .flip-note:hover .flip-note-inner{
+  width: 550px;
+  height: 500px;
+  z-index: 10;
+  transition: width 1s height 1s;
+}
+ */
 
 
 
