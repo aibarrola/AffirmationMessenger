@@ -138,7 +138,8 @@
 }
 
 .flip-note-front{
-  vertical-align: baseline;
+  padding: 5%;
+  line-height: 200px;
   background-color: #f5f4f4;
   color: #798992;
   border-left:rgb(187, 187, 187) solid 4px;
