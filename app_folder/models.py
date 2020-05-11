@@ -26,7 +26,7 @@ class User(UserMixin, db.Model):
 
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    userMessage = db.Column(db.String(128), index=True)
+    userMessage = db.Column(db.String(512), index=True)
     username = db.Column(db.String(64), index=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     userFrom = db.Column(db.String(64), index=True)
