@@ -96,3 +96,7 @@ input{
 #sendMessageLabel{
     font-size: 6em;
 }
+
+#sendMessageTitle{
+    color: #00628B;
+}
