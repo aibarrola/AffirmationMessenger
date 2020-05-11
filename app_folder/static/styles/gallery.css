@@ -84,7 +84,6 @@
   .letterGallery h1{
     position: absolute;
     top: 20%;
-    bottom: 20%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 4em;
