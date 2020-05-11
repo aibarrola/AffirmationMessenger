@@ -2,7 +2,7 @@
 
 {% block inbox %}
 <div class="center">
-    <h1> Inbox</h1>
+    <h1> Affirmation Notes </h1>
 </div>
 
 
@@ -14,7 +14,7 @@
                 <div class="flip-note"> 
                     <div class="flip-note-inner">
                         <div class="flip-note-front">
-                            <h3> {{messages[i].userFrom}}</h3>
+                            <h3 class="userFrom"> {{messages[i].userFrom}}</h3>
                         </div>
                         <div class="flip-note-back">
                             <h4> {{messages[i].userMessage}}</h4>
@@ -31,7 +31,7 @@
                     <div class="flip-note"> 
                         <div class="flip-note-inner">
                             <div class="flip-note-front">
-                                <h3> {{messages[i+1].userFrom}}</h3>
+                                <h3 class="userFrom"> {{messages[i+1].userFrom}}</h3>
                             </div>
                             <div class="flip-note-back">
                                 <h4> {{messages[i+1].userMessage}}</h4>
@@ -49,7 +49,7 @@
                 <div class="flip-note"> 
                     <div class="flip-note-inner">
                         <div class="flip-note-front">
-                            <h3> {{messages[i+2].userFrom}}</h3>
+                            <h3 class="userFrom"> {{messages[i+2].userFrom}}</h3>
                         </div>
                         <div class="flip-note-back">
                             <h4> {{messages[i+2].userMessage}}</h4>

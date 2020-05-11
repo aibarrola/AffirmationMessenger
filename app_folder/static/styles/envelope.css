@@ -138,13 +138,12 @@
 }
 
 .flip-note-front{
-  padding-top: 15%;
+  padding: 16%;
   background-color: #f5f4f4;
   color: #798992;
   border-left:rgb(187, 187, 187) solid 4px;
   border-bottom:rgb(187, 187, 187) solid 4px;
   overflow:auto;
-  padding-bottom: 15%;
   height: 200px;
 }
 
