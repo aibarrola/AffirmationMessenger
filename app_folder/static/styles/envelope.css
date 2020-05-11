@@ -145,6 +145,7 @@
   border-bottom:rgb(187, 187, 187) solid 4px;
   overflow:hidden;
   padding-bottom: 15%;
+  height: 200px;
 }
 
 .flip-note-back{
