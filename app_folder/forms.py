@@ -38,6 +38,6 @@ class SendMessageForm(FlaskForm):
     submit = SubmitField('Send Message')
     
 class ConfessionForm(FlaskForm):
-    confessionMessage = TextAreaField('What is your confession?', validators=[DataRequired()])
+    confessionMessage = StringField('What is your confession?', validators=[DataRequired()])
     confessionFrom = StringField('Who is it by', validators=[DataRequired()])
     submit = SubmitField( 'Post Confession')

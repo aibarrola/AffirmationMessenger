@@ -10,27 +10,38 @@
 <div>
     <form action="" method= "post">
         {{form.hidden_tag()}}
-
-        <h4 id="sendConfessionLabel"> What is your confession? </h4>
-        {{ form.confessionMessage(size=512)}}
-        <h5> Who is it from</h5>
-        {{ form.confessionFrom(size=64)}}
-
-        <button class="btn submit"> Send Confession </button>
+        <div id="confessionForm">
+            <a id="confMessageLabel"> What is your confession? </a>
+                {{ form.confessionMessage(size=512, id='confMessage')}}
+            <a id="confMessageLabel2">  Who is it from?</a>
+                {{ form.confessionFrom(size=64, id='confFrom')}}
+                <div>
+                    <button id="submitConf" class="btn submit"> Send Confession </button>
+                </div>
+        </div>
     </form>
 </div>
+
+<hr>
 
 
 <div>
     <div>
-        {% for conf in Allconfessions %}
-        <h2> {{ conf.confessionMessage }} </h2>
+        {% for conf in range(Allconfessions|length-1,0,-1) %}
+
+        <div class="EachConfession">
+            <div class="confessionMessage">
+                <a> {{ Allconfessions[conf].confessionMessage }} </a>
+
+            </div>
+            <div class="confessionFrom">
+                <a> {{ Allconfessions[conf].confessionFrom }}</a>
+            </div>
+        </div>
         {% endfor %}
     </div>
 </div>
-<div>
-    <a href='/confessions'>Confession Wall</a>
-</div>
+
 
 
 

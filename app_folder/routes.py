@@ -94,13 +94,6 @@ def confessionwall():
         confession = Confession(confessionMessage = form.confessionMessage.data, confessionFrom = form.confessionFrom.data)
         db.session.add(confession)
         db.session.commit()
-        return redirect("/gallery")
+        return redirect("/confessionWall")
 
     return render_template('confessionWall.html', title="Confession", form=form, Allconfessions = Allconfessions)
-
-
-@app.route("/confessions")
-@login_required
-def confessions():
-    Allconfessions = Confession.query.all()
-    return render_template('confessions.html', Allconfessions = Allconfessions)
