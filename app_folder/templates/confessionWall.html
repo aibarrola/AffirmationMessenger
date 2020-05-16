@@ -18,16 +18,25 @@
 
         <button class="btn submit"> Send Confession </button>
     </form>
-
 </div>
 
 
 <div>
-
+    <div>
+        {% for conf in Allconfessions %}
+        <h2> {{ conf.confessionMessage }} </h2>
+        {% endfor %}
+    </div>
+</div>
+<div>
+    <a href='/confessions'>Confession Wall</a>
 </div>
 
 
 
+
+   
+      
 
 
 {% endblock %}

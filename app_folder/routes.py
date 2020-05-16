@@ -85,6 +85,7 @@ def inbox():
 @login_required
 def confessionwall():
     form = ConfessionForm()
+    Allconfessions = Confession.query.all()
 
     if not current_user.is_authenticated:
         return redirect("/home")
@@ -95,4 +96,11 @@ def confessionwall():
         db.session.commit()
         return redirect("/gallery")
 
-    return render_template('confessionWall.html', title="Confession", form=form)
+    return render_template('confessionWall.html', title="Confession", form=form, Allconfessions = Allconfessions)
+
+
+@app.route("/confessions")
+@login_required
+def confessions():
+    Allconfessions = Confession.query.all()
+    return render_template('confessions.html', Allconfessions = Allconfessions)

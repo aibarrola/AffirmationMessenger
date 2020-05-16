@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block confession %}
+
+<h1> wall</h1>
+
+
+<div>
+    {% for conf in Allconfessions %}
+    
+    <h2> {{ conf.confessionMessage }} </h2>
+    {% endfor %}
+</div>
+
+<h3> end</h3>
+
+{% endblock %}
