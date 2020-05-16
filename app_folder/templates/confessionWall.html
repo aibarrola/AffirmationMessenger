@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block confession %}
+
+<div class="center"> 
+    <h1> Confession Wall</h1>
+</div>
+
+
+<div>
+    <form action="" method= "post">
+        {{form.hidden_tag()}}
+
+        <h4 id="sendConfessionLabel"> What is your confession? </h4>
+        {{ form.confessionMessage(size=512)}}
+        <h5> Who is it from</h5>
+        {{ form.confessionFrom(size=64)}}
+
+        <button class="btn submit"> Send Confession </button>
+    </form>
+
+</div>
+
+
+<div>
+
+</div>
+
+
+
+
+
+{% endblock %}

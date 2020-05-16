@@ -34,3 +34,8 @@ class Message(db.Model):
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
+
+class Confession(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    confessionMessage = db.Column(db.String(512), index=True)
+    confessionFrom = db.Column(db.String(64), index=True)
