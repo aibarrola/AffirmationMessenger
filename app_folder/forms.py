@@ -35,5 +35,9 @@ class RegistrationForm(FlaskForm):
 class SendMessageForm(FlaskForm):
     userMessage = TextAreaField('What is your message:', validators=[DataRequired()])
     userFrom = StringField('Who is it by', validators=[DataRequired()])
-    submit = SubmitField(' Send Message ')
+    submit = SubmitField('Send Message')
     
+class ConfessionForm(FlaskForm):
+    confessionMessage = TextAreaField('What is your confession?', validators=[DataRequired()])
+    confessionFrom = StringField('Who is it by', validators=[DataRequired()])
+    submit = SubmitField( 'Post Confession')

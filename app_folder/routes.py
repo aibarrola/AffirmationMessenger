@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, flash, request, url_for
 from app_folder import app, db, login
-from .forms import LoginForm, RegistrationForm, SendMessageForm
-from app_folder.models import User, Message
+from .forms import LoginForm, RegistrationForm, SendMessageForm, ConfessionForm
+from app_folder.models import User, Message, Confession
 from flask_login import current_user, login_required, logout_user, login_user
 
 
@@ -13,7 +13,10 @@ def load_user(user_id):
 @app.route("/")
 @app.route("/home")
 def home():
+    if current_user.is_authenticated:
+        return redirect('gallery')
     return render_template('home.html', title="Home", User=User)
+    
 
 @app.route("/createEnvelope", methods=['GET', 'POST'])
 def register():
@@ -76,3 +79,20 @@ def inbox():
     user = current_user
     messages = Message.query.filter_by(username=user.username).all()
     return render_template('inbox.html', title="Inbox", user = user, messages = messages)
+
+
+@app.route("/confessionWall", methods=['GET','POST'])
+@login_required
+def confessionwall():
+    form = ConfessionForm()
+
+    if not current_user.is_authenticated:
+        return redirect("/home")
+
+    if form.validate_on_submit():
+        confession = Confession(confessionMessage = form.confessionMessage.data, confessionFrom = form.confessionFrom.data)
+        db.session.add(confession)
+        db.session.commit()
+        return redirect("/gallery")
+
+    return render_template('confessionWall.html', title="Confession", form=form)
