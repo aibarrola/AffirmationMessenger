@@ -11,6 +11,7 @@
        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/envelope.css') }}">
        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/gallery.css') }}">
+       <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/confessionWall.css') }}">
 
     </head>
 
@@ -21,6 +22,7 @@
  
             {% else %}
             <nav class="nav nav-pills nav-fill">
+                <a class="nav-item nav-link" href="{{ url_for('confessionwall') }}">Confession Wall</a>
                 <a class="nav-item nav-link" href="{{ url_for('gallery') }}">Gallery</a>
                 <a class="nav-item nav-link" href="{{ url_for('inbox') }}">Inbox</a>
                 <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
@@ -37,6 +39,7 @@
         {% block login %}{% endblock %}
         {% block message %}{% endblock %}
         {% block inbox %}{% endblock %}
+        {% block confession %}{% endblock %}
 
         {% with messages = get_flashed_messages() %}
         {% if messages %}

@@ -1,0 +1,60 @@
+
+
+#confessionForm{
+    text-align:center;
+}
+
+/* styling for label of confession form */
+#confMessageLabel{
+    font-size:2em;
+    color: #00628B;
+}
+
+/* styling for label of confession from form */
+#confMessageLabel2{
+    font-size: 2em;
+    color: #00628B; 
+}
+
+/* styling for input label of confession*/
+#confMessage{
+    height: 30px;
+    width: 300px;
+    font-size: 2em;
+}
+
+/* styling for input of confession from  */
+#confFrom{
+    height: 30px;
+    font-size: 2em;
+    width: 200px;
+}
+
+/* styling for submit confession button*/
+#submitConf{
+    margin-top: .5%;
+    font-size: 1.5em;
+
+}
+
+
+
+/* styling for each confession*/
+.EachConfession{
+    width: 500px;
+    text-align:center;
+    border-left: solid white;
+    margin-bottom: 1%;
+    background-color: #f5f4f4;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* styling for label of confession message */
+.confessionMessage{
+    font-size: 3em;
+    color: #00628B;
+}
+/* styling for label of confession from */
+.confessionFrom{
+    font-size: 2.2em;
+}
