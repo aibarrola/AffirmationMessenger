@@ -7,32 +7,23 @@
     <div>
         <h1> Creating Envelope </h1>
     </div>
-   
-    <div class="paper">
-
-        <form action="" method="post" novalidate>
-          {{ form.hidden_tag() }}
-
-            <!-- Username Input -->
-            <h2>{{ form.username.label }}</h2>
-            {{ form.username(size=64) }}
-
-            <!-- Family Choice -->
-            <h2>{{ form.famchoice.label }}</h2>
-            {{ form.famchoice(class_='famChoice') }}
-
-            <!-- Password Input -->
-            <h2>{{ form.password.label }}</h2>
-            {{ form.password(size=32) }}
-            
-            <br>
-            <br>
-
-            <button class="btn submit"> Create Account </button>
-
-        </form>
-
-    </div>
+        <div class="paper">
+            <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+                <!-- Username Input -->
+                <h2>{{ form.username.label }}</h2>
+                {{ form.username(size=64) }}
+                <!-- Family Choice -->
+                <h2>{{ form.famchoice.label }}</h2>
+                {{ form.famchoice(class_='famChoice') }}
+                <!-- Password Input -->
+                <h2>{{ form.password.label }}</h2>
+                {{ form.password(size=32) }}         
+                <br>
+                <br>
+                <button class="btn submit"> Create Account </button>
+            </form>
+        </div>
 </div>
 
 
