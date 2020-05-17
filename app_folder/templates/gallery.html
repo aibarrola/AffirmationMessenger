@@ -26,10 +26,27 @@
            <div>
             {% for i in range(0,Alluser|length,4 ) %}
                 <a href="/user/{{Alluser[i].username}}">
-                    <div class="mailGallery">
-                        <div class="coverGallery"></div>
-                        <div class="letterGallery"> <h1> {{Alluser[i].username}}</h1></div>
-                    </div>
+                    {% if Alluser[i].family == 'Blue' %}
+                        <div class="mailGalleryBlue">
+                            <div class="coverGalleryBlue"></div>
+                            <div class="letterGallery"> <h1> {{Alluser[i].username}}</h1></div>
+                        </div>
+                    {% elif Alluser[i].family == 'Red' %}
+                        <div class="mailGalleryRed">
+                            <div class="coverGalleryRed"></div>
+                            <div class="letterGalleryRed"> <h1> {{Alluser[i].username}}</h1></div>
+                        </div>
+                    {% elif Alluser[i].family == "Yellow" %}
+                        <div class="mailGalleryYellow">
+                            <div class="coverGalleryYellow"></div>
+                            <div class="letterGallery"> <h1> {{Alluser[i].username}}</h1></div>
+                        </div>
+                    {% elif Alluser[i].family == "Green" %}
+                        <div class="mailGalleryGreen">
+                            <div class="coverGalleryGreen"></div>
+                            <div class="letterGallery"> <h1> {{Alluser[i].username}}</h1></div>
+                        </div>
+                    {% endif %}
                 </a>
             {% endfor %}
         </div>
@@ -37,17 +54,33 @@
         </div>
 
         <div class="col-md-3">  
-                <div>
-                    
+                <div>        
                     {% for i in range(0,Alluser|length,4 ) %}
-                    {% if i < (Alluser|length - 2) %}
-                        <a href="/user/{{Alluser[i+1].username}}">
-                            <div class="mailGallery">
-                                <div class="coverGallery"></div>
-                                <div class="letterGallery"> <h1> {{Alluser[i+1].username}}</h1></div>
-                            </div>
-                        </a>
-                    {% endif %}
+                    <a href="/user/{{Alluser[i+1].username}}">
+                        {% if i < (Alluser|length - 2) %}
+                            {% if Alluser[i+1].family == 'Blue' %}
+                                <div class="mailGalleryBlue">
+                                    <div class="coverGalleryBlue"></div>
+                                    <div class="letterGallery"> <h1> {{Alluser[i+1].username}}</h1></div>
+                                </div>
+                            {% elif Alluser[i+1].family == 'Red' %}
+                                <div class="mailGalleryRed">
+                                    <div class="coverGalleryRed"></div>
+                                    <div class="letterGallery"> <h1> {{Alluser[i+1].username}}</h1></div>
+                                </div>
+                            {% elif Alluser[i+1].family == "Yellow" %}
+                                <div class="mailGalleryYellow">
+                                    <div class="coverGalleryYellow"></div>
+                                    <div class="letterGallery"> <h1> {{Alluser[i+1].username}}</h1></div>
+                                </div>
+                            {% elif Alluser[i+1].family == "Green" %}
+                                <div class="mailGalleryGreen">
+                                    <div class="coverGalleryGreen"></div>
+                                    <div class="letterGallery"> <h1> {{Alluser[i+1].username}}</h1></div>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    </a>
                     {% endfor %}
                 </div>
 
@@ -55,34 +88,63 @@
 
         <div class="col-md-3">
                 {% for i in range(0,Alluser|length,4 ) %}
-                {% if i < (Alluser|length - 2) %}
                 <a href="/user/{{Alluser[i+2].username}}">
-                    <div class="mailGallery">
-                        <div class="coverGallery"></div>
-                        <div class="letterGallery"> <h1> {{Alluser[i+2].username}}</h1></div>
-                    </div>
+                    {% if i < (Alluser|length - 2) %}
+                        {% if Alluser[i+2].family == 'Blue' %}
+                            <div class="mailGalleryBlue">
+                                <div class="coverGalleryBlue"></div>
+                                <div class="letterGallery"> <h1> {{Alluser[i+2].username}}</h1></div>
+                            </div>
+                        {% elif Alluser[i+2].family == 'Red' %}
+                            <div class="mailGalleryRed">
+                                <div class="coverGalleryRed"></div>
+                                <div class="letterGallery"> <h1> {{Alluser[i+2].username}}</h1></div>
+                            </div>
+                        {% elif Alluser[i+2].family == "Yellow" %}
+                            <div class="mailGalleryYellow">
+                                <div class="coverGalleryYellow"></div>
+                                <div class="letterGallery"> <h1> {{Alluser[i+2].username}}</h1></div>
+                            </div>
+                        {% elif Alluser[i+2].family == "Green" %}
+                            <div class="mailGalleryGreen">
+                                <div class="coverGalleryGreen"></div>
+                                <div class="letterGallery"> <h1> {{Alluser[i+2].username}}</h1></div>
+                            </div>
+                        {% endif %}
+                    {% endif %}
                 </a>
-            {% endif %}
-            {% endfor %}
+                {% endfor %}
         </div>
 
         <div class="col-md-3">
-                {% for i in range(0,Alluser|length,4 ) %}
+            {% for i in range(0,Alluser|length,4 ) %}
+            <a href="/user/{{Alluser[i+3].username}}">
                 {% if i < (Alluser|length - 3) %}
-                <a href="/user/{{Alluser[i+3].username}}">
-                    <div class="mailGallery">
-                        <div class="coverGallery"></div>
-                        <div class="letterGallery"> <h1> {{Alluser[i+3].username}}</h1></div>
-                    </div>
-                </a>
-            {% endif %}
+                    {% if Alluser[i+3].family == 'Blue' %}
+                        <div class="mailGalleryBlue">
+                            <div class="coverGalleryBlue"></div>
+                            <div class="letterGallery"> <h1> {{Alluser[i+3].username}}</h1></div>
+                        </div>
+                    {% elif Alluser[i+3].family == 'Red' %}
+                        <div class="mailGalleryRed">
+                            <div class="coverGalleryRed"></div>
+                            <div class="letterGalleryRed"> <h1> {{Alluser[i+3].username}}</h1></div>
+                        </div>
+                    {% elif Alluser[i+3].family == "Yellow" %}
+                        <div class="mailGalleryYellow">
+                            <div class="coverGalleryYellow"></div>
+                            <div class="letterGallery"> <h1> {{Alluser[i+3].username}}</h1></div>
+                        </div>
+                    {% elif Alluser[i+3].family == "Green" %}
+                        <div class="mailGalleryGreen">
+                            <div class="coverGalleryGreen"></div>
+                            <div class="letterGallery"> <h1> {{Alluser[i+3].username}}</h1></div>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            </a>
             {% endfor %}
-        </div>
-
-        
+        </div>     
     </div>
 </div>
-
-
-
 {% endblock %}
