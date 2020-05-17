@@ -55,19 +55,20 @@ input{
 
 }
 
+
+
 /* base background paper  */
 .paper{
-    margin-top: 3%;
+    margin-top:1%;
     position: absolute;
-    top:15%;
-    left: 30%;
     background-color: #f5f4f4;
     border-left:rgb(187, 187, 187) solid 8px;
     border-bottom:rgb(187, 187, 187)solid 8px;
     height: 800px;
     width: 800px;
-}
+    left: 29%;
 
+}
 /* background paper for login page */
 #loginpaper{
     height:550px;
