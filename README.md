@@ -5,11 +5,14 @@ AffirmationOnline is a website that allows users to create an envelope and write
 ## Requirements
 
 > pip install Flask
+
 > pip install Flask-Login
+
 > pip install Flask-WTF
+
 > pip install SQLAlchey
 
-# Deployment
+## Deployment
 
 Deployed on Heroku using Heroku Postgres 
 
