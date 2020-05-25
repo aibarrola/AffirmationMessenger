@@ -1,5 +1,5 @@
 # AffirmationOnline
-A website that allows VSA members to create an envelope and write affirmations to other members 
+Allows VSA members to create an envelope and write affirmations to other members 
 ---
 __Context__: At the end of the year, VSA would come together for one last event called End of the Year Banquet and you were able to write your name on envelopes and tape it to the wall. Throughout the event, members would be able to write affirmation notes and put them in member's envelopes. However VSA was not able to host this last event due to COVID-19 so this was my way of keeping the affirmations alive by digitalizing the process. 
 
@@ -19,7 +19,7 @@ pip install SQLAlchey
 5) Click on Confession Wall to write or check confessions
 
 ## Deployment
-[Link](https://affirmationonline.herokuapp.com/home)
+[AffirmationOnline Website Link](https://affirmationonline.herokuapp.com/home)
 Deployed on Heroku using Heroku Postgres 
 
 
