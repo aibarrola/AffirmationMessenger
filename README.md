@@ -19,7 +19,7 @@ pip install SQLAlchey
 5) Click on Confession Wall to write or check confessions
 
 ## Deployment
-[Click to direct to website](https://affirmationonline.herokuapp.com/home)
+- [affirmationoneline.herokuapp.com](https://affirmationonline.herokuapp.com/home)
 - Deployed on Heroku using Heroku Postgres 
 
 
