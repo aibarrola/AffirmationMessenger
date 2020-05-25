@@ -15,4 +15,4 @@ Deployed on Heroku using Heroku Postgres
 
 ## Demonstration 
 
-![](https://recordit.co/SGiIOtI0d8)
+![](demo.gif)
