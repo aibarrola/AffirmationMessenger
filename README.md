@@ -1,4 +1,4 @@
-# AffirmationOnline
+# Affirmation Messenger
 Allows VSA members to create an envelope and write affirmations to other members 
 ---
 __Context__: At the end of the year, VSA would come together for one last event called End of the Year Banquet and you were able to write your name on envelopes and tape it to the wall. Throughout the event, members would be able to write affirmation notes and put them in member's envelopes. However VSA was not able to host this last event due to COVID-19 so this was my way of keeping the affirmations alive by digitalizing the process. 
