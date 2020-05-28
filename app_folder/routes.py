@@ -51,13 +51,14 @@ def logout():
     logout_user()
     return redirect("home")
 
-
+#Show the list of users 
 @app.route("/gallery")
 @login_required
 def gallery():
     Alluser = User.query.all()
     return render_template('gallery.html', title="Gallery", Alluser=Alluser)
 
+#Sending message to a user
 @app.route("/user/<user>", methods=['GET', 'POST'])
 @login_required
 def sendMessage(user):
@@ -70,7 +71,7 @@ def sendMessage(user):
         return redirect("/gallery")
     return render_template('sendMessage.html', title="Send Message", ToUser=ToUser, form=form)
 
-
+#Show the affirmations sent to you
 @app.route("/inbox", methods=['GET', 'POST'])
 @login_required
 def inbox():
